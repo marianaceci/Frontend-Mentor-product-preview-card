@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(161, 33%, 17%);
+    --cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; /* Weights: 500, 700 */
+}
+
+.mobile-image{
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--cream);
+}
+
+main {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.desktop-image{
+    border-radius: 10px 0 0 10px;
+}
+
+.texts {
+    padding: 35px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-right: 20px;
+}
+
+span {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    background: var(--dark-cyan);
+    color: var(--white);
+    font-weight: 700;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--very-dark-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (max-width: 625px){
+    .desktop-image {
+        display: none;
+    }
+
+    .mobile-image{
+        display: block;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container {
+        width: 330px;
+        height: 610px;
+        flex-direction: column;
+    }
+
+    .texts {
+        padding: 25px;
+    }
+        
+    h1 {
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 0.95rem;
+    }
+    
+    .prices {
+        margin-bottom: 18px;
+    }    
+}
